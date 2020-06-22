@@ -60,7 +60,7 @@ window.addEventListener('scroll', function(e) {
     for (const section of sections) {
         let activeSection = section.getAttribute("data-nav");
         let activeLink    = document.querySelector(`li[target-nav = '${activeSection}']`);
-        if(Math.abs(section.offsetTop - currentScrollPosition) < 150) {
+        if(Math.abs(section.offsetTop - currentScrollPosition) < 250) {
             activeLink.classList.add('menu__link__active');
             section.classList.add("your-active-class");
             document.getElementById('navbar__list').scrollTop = activeLink.offsetTop-10;
